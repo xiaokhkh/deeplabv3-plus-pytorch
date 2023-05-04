@@ -30,9 +30,9 @@ if __name__ == "__main__":
     #
     #   count、name_classes仅在mode='predict'时有效
     #-------------------------------------------------------------------------#
-    count           = False
-    name_classes    = ["background","aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"]
-    # name_classes    = ["background","cat","dog"]
+    count           = True
+    # name_classes    = ["background","aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"]
+    name_classes    = ["background","1"]
     #----------------------------------------------------------------------------------------------------------#
     #   video_path          用于指定视频的路径，当video_path=0时表示检测摄像头
     #                       想要检测视频，则设置如video_path = "xxx.mp4"即可，代表读取出根目录下的xxx.mp4文件。
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     #   simplify            使用Simplify onnx
     #   onnx_save_path      指定了onnx的保存路径
     #-------------------------------------------------------------------------#
-    simplify        = True
+    simplify        = False
     onnx_save_path  = "model_data/models.onnx"
 
     if mode == "predict":

@@ -25,11 +25,13 @@ class DeeplabV3(object):
         #   训练好后logs文件夹下存在多个权值文件，选择验证集损失较低的即可。
         #   验证集损失较低不代表miou较高，仅代表该权值在验证集上泛化性能较好。
         #-------------------------------------------------------------------#
-        "model_path"        : 'model_data/deeplab_mobilenetv2.pth',
+        # "model_path"        : 'model_data/deeplab_mobilenetv2.pth',
+        "model_path"        : 'logs/ep005-loss0.145-val_loss0.151.pth',
+        # "model_path"        : 'logs/best_epoch_weights.pth',
         #----------------------------------------#
         #   所需要区分的类的个数+1
         #----------------------------------------#
-        "num_classes"       : 21,
+        "num_classes"       : 2,
         #----------------------------------------#
         #   所使用的的主干网络：
         #   mobilenet
@@ -57,7 +59,7 @@ class DeeplabV3(object):
         #   是否使用Cuda
         #   没有GPU可以设置成False
         #-------------------------------#
-        "cuda"              : True,
+        "cuda"              : False,
     }
 
     #---------------------------------------------------#
